@@ -110,6 +110,15 @@ export default function Home() {
       window.removeEventListener("resize", () => setSlideWidth(getWidth()));
   }, []);
 
+    useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) =>
+        prev === popularPackages.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
