@@ -6,7 +6,10 @@ import Home from "./pages/Home";
 import Packages from "./pages/Packages";
 import PackageDetails from "./pages/PackageDetails";
 import Contact from "./pages/Contact";
-import GlassLoader from "./components/Loader"; // optional loader
+import About from "./pages/AboutUs";
+import Book from "./pages/BookPage";
+import GlassLoader from "./components/Loader";
+
 
 // ScrollToTop on route change
 function ScrollToTop() {
@@ -42,6 +45,9 @@ export default function App() {
             <Route path="/packages" element={<Packages />} />
             <Route path="/packages/:id" element={<PackageDetails />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/book" element={<Book />} />
+            
           </Routes>
         </main>
 

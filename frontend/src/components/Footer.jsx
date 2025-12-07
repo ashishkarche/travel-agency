@@ -1,82 +1,120 @@
-import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebookF } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaInstagram,
+  FaFacebookF,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-tr from-white/20 via-white/10 to-white/5 backdrop-blur-lg text-gray-900 mt-16">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-4">
+    <footer className="bg-white border-t shadow-inner mt-20">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-4">
 
-        {/* Brand & Motto */}
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold tracking-tight text-gray-900">Shravni Tourist & Travels</h3>
+        {/* Brand */}
+        <div className="space-y-5">
+          <h3 className="text-2xl font-bold text-gray-900">Shravni Tourist & Travels</h3>
           <p className="text-gray-600 text-sm leading-relaxed">
-            Explore Pune, Mumbai, Lonavala & more. Comfortable, reliable, and safe trips with verified drivers.  
-            Your adventure starts here.
+            Trusted cab services for Airport Transfers, Outstation Trips &
+            Maharashtra tourism. Clean cars, verified drivers, and affordable pricing.
           </p>
-          <div className="flex gap-3 mt-3">
-            <a href="#" className="p-2 bg-white/20 rounded-full hover:bg-white/40 transition text-gray-900">
-              <FaFacebookF size={16} />
+
+          <div className="flex gap-4 mt-3">
+            <a
+              href="#"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition"
+            >
+              <FaFacebookF size={18} className="text-gray-700" />
             </a>
-            <a href="#" className="p-2 bg-white/20 rounded-full hover:bg-white/40 transition text-gray-900">
-              <FaInstagram size={16} />
+            <a
+              href="#"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition"
+            >
+              <FaInstagram size={18} className="text-gray-700" />
             </a>
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-gray-900">Quick Links</h4>
-          <ul className="space-y-2">
+        {/* Navigation */}
+        <div>
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h4>
+          <ul className="space-y-3">
             <li>
-              <Link to="/" className="hover:text-blue-500 transition relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
+              <Link
+                to="/"
+                className="text-gray-700 hover:text-blue-600 transition font-medium"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/packages" className="hover:text-blue-500 transition relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
+              <Link
+                to="/packages"
+                className="text-gray-700 hover:text-blue-600 transition font-medium"
+              >
                 Packages
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-blue-500 transition relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
+              <Link
+                to="/contact"
+                className="text-gray-700 hover:text-blue-600 transition font-medium"
+              >
                 Contact
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Contact Info */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-gray-900">Contact</h4>
-          <div className="flex items-center gap-2 text-gray-700">
-            <FaMapMarkerAlt /> Pune, Maharashtra, India
-          </div>
-          <div className="flex items-center gap-2 text-gray-700">
-            <FaPhoneAlt /> <a href="tel:+91XXXXXXXXXX" className="hover:text-blue-500 transition">+91-XXXXXXXXXX</a>
-          </div>
-          <div className="flex items-center gap-2 text-gray-700">
-            <FaEnvelope /> <a href="mailto:info@shravnitours.com" className="hover:text-blue-500 transition">info@shravnitours.com</a>
+        {/* Contact */}
+        <div>
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">Contact</h4>
+
+          <div className="space-y-3 text-gray-700">
+            <p className="flex items-center gap-2">
+              <FaMapMarkerAlt /> Pune, Maharashtra, India
+            </p>
+            <p className="flex items-center gap-2">
+              <FaPhoneAlt />
+              <a href="tel:+91XXXXXXXXXX" className="hover:text-blue-600">
+                +91-XXXXXXXXXX
+              </a>
+            </p>
+            <p className="flex items-center gap-2">
+              <FaEnvelope />
+              <a
+                href="mailto:info@shravnitours.com"
+                className="hover:text-blue-600"
+              >
+                info@shravnitours.com
+              </a>
+            </p>
           </div>
         </div>
 
-        {/* CTA / WhatsApp */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-gray-900">Book a Trip</h4>
-          <p className="text-gray-600 text-sm">Instant assistance via WhatsApp. Click below to start your booking.</p>
+        {/* CTA */}
+        <div>
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">Book a Cab</h4>
+          <p className="text-gray-600 text-sm mb-4">
+            Chat with us for instant booking and quick support.
+          </p>
+
           <a
             href="https://wa.me/91XXXXXXXXXX"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-green-500 text-white font-medium hover:bg-green-600 transition shadow-md"
+            className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-green-500 text-white font-medium hover:bg-green-600 transition shadow-sm"
           >
             <FaWhatsapp /> Chat on WhatsApp
           </a>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-200/50 mt-10 text-center py-4 text-gray-500 text-xs">
-        © {new Date().getFullYear()} Shravni Tourist & Travels — All rights reserved.
+      {/* Bottom */}
+      <div className="border-t bg-gray-50 py-4 text-center text-gray-500 text-sm">
+        © {new Date().getFullYear()} Shravni Tourist & Travels • All Rights Reserved
       </div>
     </footer>
   );
